@@ -228,7 +228,7 @@ RCT_EXPORT_METHOD(startDFU:(NSString *)deviceAddress
         initiator.delegate = self;
         initiator.progressDelegate = self;
 
-        [NSThread sleepForTimeInterval: 1]; //Work around for being stuck in iOS 13
+        [NSThread sleepForTimeInterval: 2]; //Work around for being stuck in iOS 13
         
         DFUServiceController * controller = [initiator start];
       }
